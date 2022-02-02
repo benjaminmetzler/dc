@@ -1,0 +1,12 @@
+---
+version: "3.3"
+services:
+  homer:
+    ports:
+      - "80:8080"
+    volumes:
+      - "/home/pi/homer/assets:/www/assets"
+    restart: always
+    image: "b4bz/homer:latest"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
